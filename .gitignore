@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native builds
+ios/Pods/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Sentry
+.sentryclirc
+ios/sentry.properties
+
+# Xcode
+!ios/.xcode.env
+ios/.xcode.env.local
+
+# Debug logs
+npm-debug.*
+yarn-error.log
+yarn-debug.log*
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

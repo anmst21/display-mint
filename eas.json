@@ -1,0 +1,30 @@
+{
+  "cli": {
+    "version": ">= 12.3.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "includeDSYMs": true
+    },
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      },
+      "includeDSYMs": true
+    },
+    "production": {
+      "ios": {
+        "simulator": false,
+        "autoIncrement": "buildNumber",
+        "includeDSYMs": true
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

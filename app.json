@@ -1,0 +1,100 @@
+{
+  "expo": {
+    "splash": {
+      "image": "./assets/images/splash-screen.png",
+      "backgroundColor": "#000000"
+    },
+    "backgroundColor": "#FFCC00",
+    "platforms": [
+      "ios"
+    ],
+    "name": "Display",
+    "slug": "hellcat",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo.png",
+    "scheme": "h3llcat",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "jsEngine": "hermes",
+      "hermes": true,
+      "builds": {
+        "release": {
+          "autoIncrement": "buildNumber",
+          "simulator": false,
+          "includeDSYMs": true
+        }
+      },
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "We need access to your photo library to allow you to upload images in reports.",
+        "LSApplicationQueriesSchemes": [
+          "cbwallet",
+          "metamask",
+          "h3llcat"
+        ],
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "h3llcat"
+            ]
+          }
+        ]
+      },
+      "supportsTablet": true,
+      "bundleIdentifier": "com.h3llcat.app",
+      "associatedDomains": [
+        "applinks:h3llcat.app"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/SFPro.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Give H3LLCAT access to photos to leave a report."
+        }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "organization": "nexus-technologies",
+          "project": "display-mobile",
+          "url": "https://sentry.io/"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#000000",
+          "image": "./assets/images/splash-screen.png"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "05caa65f-25fb-4910-9df4-572712416434"
+      }
+    },
+    "android": {
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.h3llcat.app"
+    }
+  }
+}
